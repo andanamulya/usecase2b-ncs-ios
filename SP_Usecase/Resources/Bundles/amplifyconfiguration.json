@@ -1,0 +1,36 @@
+{
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "ap-southeast-1_eCu4bVo2s",
+                        "AppClientId": "kttocq3am76q5blhn44t1s3lr",
+                        "Region": "ap-southeast-1"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "authenticationFlowType": "USER_SRP_AUTH",
+                        "OAuth": {
+                            "WebDomain": "https://spgrouppocdemo.auth.ap-southeast-1.amazoncognito.com",
+                            "AppClientId": "kttocq3am76q5blhn44t1s3lr",
+                            "SignInRedirectURI": "myapp://home",
+                            "SignOutRedirectURI": "myapp://home",
+                            "Scopes": [ 
+                                "phone",
+                                "email",
+                                "openid",
+                                "profile",
+                                "aws.cognito.signin.user.admin"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
